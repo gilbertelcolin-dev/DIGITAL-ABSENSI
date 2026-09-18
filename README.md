@@ -2,6 +2,12 @@
 
 Sistem absensi les berbasis **QR Code**: siswa scan dari tablet, data tercatat otomatis, admin pantau kehadiran lewat dashboard.
 
+## Tampilan
+
+![Halaman scanner Digital Absensi](docs/scanner.png)
+
+Halaman scanner: arahkan QR/barcode siswa ke kamera, hasil absen langsung tampil di bawah.
+
 ## Fitur
 
 - **Scanner QR (frontend)** — React + Tailwind, scan cepat, kirim otomatis ke backend
