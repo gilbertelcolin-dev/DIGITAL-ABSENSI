@@ -1,1 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap');
 @import "tailwindcss";
+
+:root {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	color: #edf4ff;
+	background: #050b12;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	min-width: 320px;
+	min-height: 100vh;
+	background: #050b12;
+}
+
+button,
+select {
+	font: inherit;
+}
+
+.font-display {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-mono {
+	font-family: 'Space Grotesk', sans-serif;
+}
+
+#reader {
+	position: relative;
+	overflow: hidden;
+	border-radius: 1.25rem;
+}
+
+#reader video {
+	width: 100% !important;
+	height: 100% !important;
+	min-height: 280px;
+	object-fit: cover;
+	filter: saturate(1.1) contrast(1.06);
+}
+
+#reader__scan_region {
+	border: 0 !important;
+}
+
+#reader__dashboard,
+#reader__header_message {
+	display: none !important;
+}
+
+.scan-success {
+	animation: success-rise 420ms ease-out both;
+}
+
+.success-check {
+	display: inline-flex;
+	width: 20px;
+	height: 20px;
+	align-items: center;
+	justify-content: center;
+	border-radius: 999px;
+	background: #5b9b78;
+	color: #ffffff;
+	animation: check-pop 500ms 100ms ease-out both;
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes welcome-pop {
+	from {
+		opacity: 0;
+		transform: translateY(18px) scale(0.94);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	}
+}
+
+@keyframes success-rise {
+	from {
+		opacity: 0;
+		transform: translateY(10px) scale(0.98);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	}
+}
+
+@keyframes check-pop {
+	0% {
+		transform: scale(0.4) rotate(-12deg);
+	}
+	70% {
+		transform: scale(1.15) rotate(4deg);
+	}
+	100% {
+		transform: scale(1) rotate(0);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.scan-success,
+	.success-check,
+	.animate-\[fade-in_400ms_ease-out\],
+	.animate-\[welcome-pop_500ms_cubic-bezier\(0\.22\,1\,0\.36\,1\)\] {
+		animation: none;
+	}
+}
+
+.admin-shell {
+	display: grid;
+	grid-template-columns: 260px minmax(0, 1fr);
+}
+
+.admin-sidebar {
+	min-height: 100vh;
+}
+
+@media (max-width: 1023px) {
+	.admin-shell {
+		display: block;
+	}
+}
