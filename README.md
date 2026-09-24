@@ -4,7 +4,7 @@ Sistem absensi les berbasis **QR Code**: siswa scan dari tablet, data tercatat o
 
 ## Tampilan
 
-![Halaman scanner Digital Absensi](docs/scanner.png)
+![Halaman scanner Digital Absensi](docs/image.png)
 
 Halaman scanner: arahkan QR/barcode siswa ke kamera, hasil absen langsung tampil di bawah.
 
